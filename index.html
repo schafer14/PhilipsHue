@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="hue">
+<head>
+	<title>Philips Hue</title>
+	<link rel="stylesheet" type="stylesheet" href="css/toggle.css">
+	<link rel="stylesheet" type="stylesheet" href="css/color.css">
+
+</head>
+<body ng-controller="LightCtrl">
+	<div ng-repeat="(id, light) in lights">
+		<label class="switch-light candy" onclick="">
+			<input type="checkbox" ng-model="light.state.on" ng-click="switch(light, id)">
+			<span>
+				<span>Off</span>
+				<span>On</span>
+			</span>
+			<a></a>
+		</label>
+		
+		Brightness: <input type="range" ng-model="bright" min="0" step="16" max="255" ng-change="brightChange(id, bright)" ng-disabled="!light.state.on">
+	</div>
+</body>
+
+<script src="js/vendors/angular.min.js"></script>
+<script src="js/vendors/angular-resources.min.js"></script>
+<script src="js/resources/hue.js"></script>
+<script src="js/ctrl.js"></script>
+
+</html>
