@@ -14,11 +14,16 @@
 				<span>Off</span>
 				<span>On</span>
 			</span>
+
 			<a></a>
 		</label>
-		
-		Brightness: <input type="range" ng-model="bright" min="0" step="16" max="255" ng-change="brightChange(id, bright)" ng-disabled="!light.state.on">
+		Color: <input type="color" ng-model="color" ng-change="colorChange(id, color)" ng-disabled="!light">
 	</div>
+
+	<canvas id="canvas" width="800"  height="600">
+		
+	</canvas>
+
 </body>
 
 <script src="js/vendors/angular.min.js"></script>

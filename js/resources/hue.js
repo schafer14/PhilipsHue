@@ -1,6 +1,6 @@
 var hue = angular.module('hue', ['ngResource']);
 var Config = {
-	api: 'http://hue.dev/',
+	api: 'http://api.hue.dev/',
 };
 
 hue
