@@ -1,4 +1,4 @@
 PhilipsHue
 ==========
 
-Projects for Philips Hue. 
+Project for controlling philips hue lights.
